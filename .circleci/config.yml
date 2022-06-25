@@ -19,8 +19,8 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: "walz_module"
-      - run: npm i
+          key: "walz_modulex"
+      - run: npm install
       - run: npm run test
 
   analyze:
