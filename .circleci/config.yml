@@ -30,7 +30,7 @@ jobs:
       - checkout
       - run: npm audit
 
-workflow:
+workflows:
   my-workflow:
     jobs:
       - build
