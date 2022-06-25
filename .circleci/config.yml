@@ -11,7 +11,7 @@ jobs:
       - save_cache:
           key: "walz_module"
           paths: 
-            - src/walz_module
+            - src/tmp/walz_module
 
   test:
     docker:
@@ -35,6 +35,8 @@ workflow:
     jobs:
       - build
       - test:
-          requires: build
+          requires: 
+            - build
       - analyze:
-          requires: test
+          requires: 
+            - test
